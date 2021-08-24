@@ -7,6 +7,6 @@
 - server：nestjs
 
 ### 测试
-[x] nestjs
-[x] WebSocket
-[ ] apollo
+- [x] nestjs
+- [x] WebSocket
+- [ ] apollo
