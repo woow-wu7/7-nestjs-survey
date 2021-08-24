@@ -1,8 +1,24 @@
-import React from 'react';
+import { useState, useMemo } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [message, setMessage] = useState('');
+  const socket = useMemo(() => new WebSocket('ws://localhost:3002'), []);
+  socket.addEventListener('open', () => setMessage('connected'));
+  socket.addEventListener('message', (e) => {
+    setMessage(e.data);
+  });
+
+  const handleClick = () => {
+    socket.send(
+      JSON.stringify({
+        event: 'update',
+      }),
+    );
+    console.log('客户端向服务器发消息', { update: 'update' });
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +34,8 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={handleClick}>点击-测试socket-io</button>
+        <div>{message}</div>
       </header>
     </div>
   );
