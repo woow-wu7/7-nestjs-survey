@@ -1,0 +1,16 @@
+{
+  "name": "nestjs-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cnpm run start",
+    "start": "cnpm run client & cnpm run server",
+    "server": "cd server && cnpm run start:dev",
+    "client": "cd client && cnpm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
