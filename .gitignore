@@ -40,3 +40,4 @@ lerna-debug.log*
 /server/node_modules
 
 # client
+/client/node_modules
