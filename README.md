@@ -10,3 +10,4 @@
 - [x] nestjs
 - [x] WebSocket
 - [ ] apollo
+- [x] ArrayBuffer TypeArray DataView
