@@ -6,6 +6,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useWebSocketAdapter(new WsAdapter(app)); // 使用我们的适配器
   app.enableCors();
+
+  process.env.isUpdate='false'
   await app.listen(3001);
 }
 bootstrap();
