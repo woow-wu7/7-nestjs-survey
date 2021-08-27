@@ -11,3 +11,4 @@
 - [x] WebSocket
 - [ ] apollo
 - [x] ArrayBuffer TypeArray DataView
+- [ ] rxjs
